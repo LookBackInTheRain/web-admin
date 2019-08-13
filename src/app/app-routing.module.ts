@@ -13,8 +13,12 @@ import {LoginComponent} from './@component/auth/login/login.component';
 const routes: Routes = [
   {
     path: '',
-    loadChildren: () => import('app/pages/pages.module')
-      .then(m => m.PagesModule),
+    loadChildren: () => import('app/front/front.module')
+      .then(m => m.FrontModule),
+  },
+  {
+    path: 'administer', loadChildren: () => import('app/admin/admin.module')
+      .then(m => m.AdminModule),
   },
   {
     path: 'auth',

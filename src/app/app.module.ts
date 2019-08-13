@@ -25,6 +25,7 @@ import {
 import {AuthComponent} from './@component/auth/auth.component';
 import {LoginComponent} from './@component/auth/login/login.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {NbSecurityModule} from '@nebular/security';
 
 @NgModule({
   declarations: [AppComponent, AuthComponent, LoginComponent],
@@ -52,6 +53,7 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
     NbButtonModule,
     NbInputModule,
     NbCheckboxModule,
+    NbSecurityModule.forRoot(),
   ],
   bootstrap: [AppComponent],
 })
